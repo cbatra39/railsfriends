@@ -1,0 +1,16 @@
+
+
+<div class="card mb-4" style="width:25rem;" >
+  <div class="card-body">
+    <h5 class="card-title"><%=@friend.first_name%> <%=@friend.last_name%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%=@friend.instagram%></h6>
+    <p class="card-text">
+      Contact No:  <%=@friend.phone%></br>
+      Email: <%=@friend.email%>
+    </p>
+      <%= link_to "Edit", edit_friend_path(@friend),class:"btn btn-secondary mb-3" %> 
+      <%= link_to "Delete", @friend,data:{'turbo-method': :delete},class:"btn btn-danger mb-3"%>
+      <%= link_to "Back", friends_path, class:"btn btn-dark mb-3 " %>
+  </div>
+</div>
+
